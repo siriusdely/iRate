@@ -7,15 +7,10 @@
 //
 
 #import "iRateAppDelegate.h"
-#import "iRateViewController.h"
 #import "iRate.h"
 
 
 @implementation iRateAppDelegate
-
-@synthesize window;
-@synthesize viewController;
-
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -32,20 +27,10 @@
     [iRate sharedInstance].previewMode = YES;
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(__unused UIApplication *)application didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions
 {    
-    // Override point for customization after application launch.
-
-    // Add the view controller's view to the window and display.
-    [window addSubview:viewController.view];
-    [window makeKeyAndVisible];
-
+    [self.window makeKeyAndVisible];
     return YES;
 }
-
-#pragma mark -
-#pragma mark Memory management
-
-
 
 @end
